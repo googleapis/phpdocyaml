@@ -14,7 +14,7 @@ See `phpdocyaml -h` for more usage information.
 
 ## Contributing
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md).
+See [contributing.md](docs/contributing.md).
 
 ## Disclaimer
 
