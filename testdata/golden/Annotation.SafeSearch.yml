@@ -1,0 +1,161 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch
+  name: SafeSearch
+  id: SafeSearch
+  summary: |-
+    Represents a SafeSearch annotation result
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'safeSearch' ]);
+    $annotation = $vision->annotate($image);
+
+    $safeSearch = $annotation->safeSearch();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\SafeSearch::__construct()
+  - \Google\Cloud\Vision\Annotation\SafeSearch::isAdult()
+  - \Google\Cloud\Vision\Annotation\SafeSearch::isSpoof()
+  - \Google\Cloud\Vision\Annotation\SafeSearch::isMedical()
+  - \Google\Cloud\Vision\Annotation\SafeSearch::isViolent()
+  - \Google\Cloud\Vision\Annotation\SafeSearch::isRacy()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create a SafeSearch annotation result
+
+    This class is instantiated internally and is used to represent the result of Cloud Vision's SafeSearch annotation
+    feature. It should not be instantiated directly. For complete usage instructions, please refer to
+    {@see}.
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The SafeSearch annotation result
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::isAdult()
+  name: isAdult
+  id: isAdult
+  summary: |-
+    Check whether the image contains adult content.
+
+    Example:
+    ```
+    if ($safeSearch->isAdult()) {
+        echo "Image contains adult content.";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `SafeSearch::STRENGTH_*` constants. Higher strength will result
+      in fewer `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::isSpoof()
+  name: isSpoof
+  id: isSpoof
+  summary: |-
+    Check whether the image was modified to make it appear funny or offensive.
+
+    Example:
+    ```
+    if ($safeSearch->isSpoof()) {
+        echo "Image contains spoofed content.";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `SafeSearch::STRENGTH_*` constants. Higher strength will result
+      in fewer `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::isMedical()
+  name: isMedical
+  id: isMedical
+  summary: |-
+    Check whether the image contains medical content
+
+    Example:
+    ```
+    if ($safeSearch->medical()) {
+        echo "Image contains medical content.";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `SafeSearch::STRENGTH_*` constants. Higher strength will result
+      in fewer `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::isViolent()
+  name: isViolent
+  id: isViolent
+  summary: |-
+    Check whether the image contains violent content
+
+    Example:
+    ```
+    if ($safeSearch->isViolent()) {
+        echo "Image contains violent content.";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `SafeSearch::STRENGTH_*` constants. Higher strength will result
+      in fewer `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\SafeSearch::isRacy()
+  name: isRacy
+  id: isRacy
+  summary: |-
+    Check whether the image contains racy content
+
+    Example:
+    ```
+    if ($safeSearch->isRacy()) {
+        echo "Image contains racy content.";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\SafeSearch
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `SafeSearch::STRENGTH_*` constants. Higher strength will result
+      in fewer `true` results, but fewer false positives. **Defaults to** `"low"`.'

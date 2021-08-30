@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\ImageProperties
+  name: ImageProperties
+  id: ImageProperties
+  summary: |-
+    Represents the imageProperties feature result
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'imageProperties' ]);
+    $annotation = $vision->annotate($image);
+
+    $imageProperties = $annotation->imageProperties();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\ImageProperties::__construct()
+  - \Google\Cloud\Vision\Annotation\ImageProperties::colors()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\ImageProperties::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create an ImageProperties result.
+
+    This class is created internally by {@see}.
+    See {@see} for full usage details.
+    This class should not be instantiated outside the externally.
+  parent: \Google\Cloud\Vision\Annotation\ImageProperties
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The imageProperties annotation result
+- uid: \Google\Cloud\Vision\Annotation\ImageProperties::colors()
+  name: colors
+  id: colors
+  summary: |-
+    Get the dominant colors in the image
+
+    Example:
+    ```
+    $colors = $imageProperties->colors();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\ImageProperties
+  type: method
+  langs:
+  - php

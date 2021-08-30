@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\OperationMetadata_State
+  name: OperationMetadata_State
+  id: OperationMetadata_State
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\OperationMetadata\State
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

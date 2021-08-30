@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Web\WebPage
+  name: WebPage
+  id: WebPage
+  summary: |-
+    Represents a Web Page from a Web Detection operation.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/eiffel-tower.jpg', 'r');
+    $image = $vision->image($imageResource, ['WEB_DETECTION']);
+    $annotation = $vision->annotate($image);
+
+    $pages = $annotation->web()->pages();
+    $firstPage = $pages[0];
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Web\WebPage::__construct()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\Web\WebPage::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\Annotation\Web\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The WebPage result

@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Face
+  name: Face
+  id: Face
+  summary: |-
+    Represents a face annotation result
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'FACE_DETECTION' ]);
+    $annotation = $vision->annotate($image);
+
+    $faces = $annotation->faces();
+    $face = $faces[0];
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Face::__construct()
+  - \Google\Cloud\Vision\Annotation\Face::landmarks()
+  - \Google\Cloud\Vision\Annotation\Face::isJoyful()
+  - \Google\Cloud\Vision\Annotation\Face::isSorrowful()
+  - \Google\Cloud\Vision\Annotation\Face::isAngry()
+  - \Google\Cloud\Vision\Annotation\Face::isSurprised()
+  - \Google\Cloud\Vision\Annotation\Face::isUnderExposed()
+  - \Google\Cloud\Vision\Annotation\Face::isBlurred()
+  - \Google\Cloud\Vision\Annotation\Face::hasHeadwear()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+  properties:
+  - type: \Google\Cloud\Vision\Annotation\Face\Landmarks
+    name: landmarks
+- uid: \Google\Cloud\Vision\Annotation\Face::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create an Face result.
+
+    This class is created internally by {@see}.
+    See {@see} for full usage details.
+    This class should not be instantiated outside the externally.
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The face annotation result
+- uid: \Google\Cloud\Vision\Annotation\Face::landmarks()
+  name: landmarks
+  id: landmarks
+  summary: |-
+    Returns an object detailing facial landmarks and their location.
+
+    Example:
+    ```
+    $leftEye = $face->landmarks()->leftEye();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face::isJoyful()
+  name: isJoyful
+  id: isJoyful
+  summary: |-
+    Check whether the face is joyful.
+
+    Example:
+    ```
+    if ($face->isJoyful()) {
+        echo "Face is Joyful";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::isSorrowful()
+  name: isSorrowful
+  id: isSorrowful
+  summary: |-
+    Check whether the face is sorrowful.
+
+    Example:
+    ```
+    if ($face->isSorrowful()) {
+        echo "Face is Sorrowful";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::isAngry()
+  name: isAngry
+  id: isAngry
+  summary: |-
+    Check whether the face is angry.
+
+    Example:
+    ```
+    if ($face->isAngry()) {
+        echo "Face is Angry";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::isSurprised()
+  name: isSurprised
+  id: isSurprised
+  summary: |-
+    Check whether the face is surprised.
+
+    Example:
+    ```
+    if ($face->isSurprised()) {
+        echo "Face is Surprised";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::isUnderExposed()
+  name: isUnderExposed
+  id: isUnderExposed
+  summary: |-
+    Check whether the face is under exposed.
+
+    Example:
+    ```
+    if ($face->isUnderExposed()) {
+        echo "Face is Under Exposed";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::isBlurred()
+  name: isBlurred
+  id: isBlurred
+  summary: |-
+    Check whether the face is blurred.
+
+    Example:
+    ```
+    if ($face->isBlurred()) {
+        echo "Face is Blurred";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'
+- uid: \Google\Cloud\Vision\Annotation\Face::hasHeadwear()
+  name: hasHeadwear
+  id: hasHeadwear
+  summary: |-
+    Check whether the person is wearing headwear.
+
+    Example:
+    ```
+    if ($face->hasHeadwear()) {
+        echo "Face has Headwear";
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: strength
+    description: '[optional] Value should be one of "low", "medium" or "high". Recommended
+      usage is via `Face::STRENGTH_*` constants. Higher strength will result in fewer
+      `true` results, but fewer false positives. **Defaults to** `"low"`.'

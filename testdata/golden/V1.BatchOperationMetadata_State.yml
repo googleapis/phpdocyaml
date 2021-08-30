@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\BatchOperationMetadata_State
+  name: BatchOperationMetadata_State
+  id: BatchOperationMetadata_State
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\BatchOperationMetadata\State
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

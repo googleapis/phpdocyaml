@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection_WebImage
+  name: WebDetection_WebImage
+  id: WebDetection_WebImage
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\WebDetection\WebImage
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

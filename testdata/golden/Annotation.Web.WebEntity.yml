@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Web\WebEntity
+  name: WebEntity
+  id: WebEntity
+  summary: |-
+    Represents an Entity deduced from similar images on the Internet.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/eiffel-tower.jpg', 'r');
+    $image = $vision->image($imageResource, ['WEB_DETECTION']);
+    $annotation = $vision->annotate($image);
+
+    $entities = $annotation->web()->entities();
+    $firstEntity = $entities[0];
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Web\WebEntity::__construct()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\Web\WebEntity::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\Annotation\Web\WebEntity
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: WebEntity info

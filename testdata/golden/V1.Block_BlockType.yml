@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\Block_BlockType
+  name: Block_BlockType
+  id: Block_BlockType
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\Block\BlockType instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse
+  name: AsyncBatchAnnotateFilesResponse
+  id: AsyncBatchAnnotateFilesResponse
+  summary: |-
+    Response to an async batch file annotation request.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.AsyncBatchAnnotateFilesResponse</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::__construct()
+  - \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::getResponses()
+  - \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::setResponses()
+  properties:
+  - name: responses
+    description: |-
+      The list of file annotation responses, one for each request in
+      AsyncBatchAnnotateFilesRequest.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.AsyncAnnotateFileResponse responses = 1;</code>
+- uid: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\AsyncAnnotateFileResponse[]|\Google\Protobuf\Internal\RepeatedField
+      $responses           The list of file annotation responses, one for each request
+      in           AsyncBatchAnnotateFilesRequest. }'
+- uid: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::getResponses()
+  name: getResponses
+  id: getResponses
+  summary: |-
+    The list of file annotation responses, one for each request in
+    AsyncBatchAnnotateFilesRequest.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.AsyncAnnotateFileResponse responses = 1;</code>
+  parent: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse::setResponses()
+  name: setResponses
+  id: setResponses
+  summary: |-
+    The list of file annotation responses, one for each request in
+    AsyncBatchAnnotateFilesRequest.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.AsyncAnnotateFileResponse responses = 1;</code>
+  parent: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesResponse
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\AsyncAnnotateFileResponse[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

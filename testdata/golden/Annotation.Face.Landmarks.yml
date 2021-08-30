@@ -1,0 +1,393 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  name: Landmarks
+  id: Landmarks
+  summary: |-
+    Describes landmarks on a face (eyes, nose, chin, etc).
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, ['FACE_DETECTION']);
+    $annotation = $vision->annotate($image);
+
+    $faces = $annotation->faces();
+    $firstFace = $faces[0];
+
+    $landmarks = $firstFace->landmarks();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::__construct()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEye()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyePupil()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyeBoundaries()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyebrow()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEye()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyePupil()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyeBoundaries()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyebrow()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::midpointBetweenEyes()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::lips()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::mouth()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::nose()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::ears()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::forehead()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::chin()
+  - \Google\Cloud\Vision\Annotation\Face\Landmarks::getLandmark()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create a landmarks results object.
+
+    This class should not be instantiated directly. It is created internally
+    by the Cloud Vision service wrapper to represent FACE_DETECTION annotation
+    results and provide helpful convenience to users.
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The face landmark results
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEye()
+  name: leftEye
+  id: leftEye
+  summary: |-
+    Fetch the left eye position.
+
+    Example:
+    ```
+    $pos = $landmarks->leftEye();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyePupil()
+  name: leftEyePupil
+  id: leftEyePupil
+  summary: |-
+    Fetch the left eye pupil position.
+
+    Example:
+    ```
+    $pos = $landmarks->leftEyePupil();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyeBoundaries()
+  name: leftEyeBoundaries
+  id: leftEyeBoundaries
+  summary: |-
+    Fetch the left eye boundaries.
+
+    This method returns an array with four keys: `left`, `right`, `top`, `bottom`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->leftEyeBoundaries();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::leftEyebrow()
+  name: leftEyebrow
+  id: leftEyebrow
+  summary: |-
+    Fetch the left eyebrow position.
+
+    This method returns an array with three keys: `left`, `right`, `upperMidpoint`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->leftEyebrow();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEye()
+  name: rightEye
+  id: rightEye
+  summary: |-
+    Fetch the right eye position.
+
+    Example:
+    ```
+    $pos = $landmarks->rightEye();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyePupil()
+  name: rightEyePupil
+  id: rightEyePupil
+  summary: |-
+    Fetch the right eye pupil position.
+
+    Example:
+    ```
+    $pos = $landmarks->rightEyePupil();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyeBoundaries()
+  name: rightEyeBoundaries
+  id: rightEyeBoundaries
+  summary: |-
+    Fetch the right eye boundaries.
+
+    This method returns an array with four keys: `left`, `right`, `top`, `bottom`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->rightEyeBoundaries();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::rightEyebrow()
+  name: rightEyebrow
+  id: rightEyebrow
+  summary: |-
+    Fetch the right eyebrow position.
+
+    This method returns an array with three keys: `left`, `right`, `upperMidpoint`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->rightEyebrow();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::midpointBetweenEyes()
+  name: midpointBetweenEyes
+  id: midpointBetweenEyes
+  summary: |-
+    Get the position of the midpoint beteeen the eyes.
+
+    Example:
+    ```
+    $pos = $landmarks->midpointBetweenEyes();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::lips()
+  name: lips
+  id: lips
+  summary: |-
+    Get the position of the lips.
+
+    This method returns an array with two keys: `upper` and `lower`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->lips();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::mouth()
+  name: mouth
+  id: mouth
+  summary: |-
+    Get the position of the mouth.
+
+    This method returns an array with three keys: `left`, `right`, `center`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->mouth();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::nose()
+  name: nose
+  id: nose
+  summary: |-
+    Get the position of the nose.
+
+    This method returns an array with four keys: `tip`, `bottomRight`, `bottomLeft`, `bottomCenter`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->nose();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::ears()
+  name: ears
+  id: ears
+  summary: |-
+    Get the position of the ears.
+
+    This method returns an array with two keys: `left` and `right`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->ears();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::forehead()
+  name: forehead
+  id: forehead
+  summary: |-
+    Get the position of the forehead glabella.
+
+    Example:
+    ```
+    $pos = $landmarks->forehead();
+    echo "x position: ". $pos['x'] . PHP_EOL;
+    echo "y position: ". $pos['y'] . PHP_EOL;
+    echo "z position: ". $pos['z'] . PHP_EOL;
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::chin()
+  name: chin
+  id: chin
+  summary: |-
+    Get the position of the chin.
+
+    This method returns an array with three keys: `left`, `right`, `gnathion`.
+    The value of each of these keys is of the normal Position format described
+    in the Cloud Vision documentation.
+
+    Example:
+    ```
+    $positions = $landmarks->chin();
+    foreach ($positions as $name => $pos) {
+        echo "Position Type: ". $name . PHP_EOL;
+        echo "x position: ". $pos['x'] . PHP_EOL;
+        echo "y position: ". $pos['y'] . PHP_EOL;
+        echo "z position: ". $pos['z'] . PHP_EOL;
+    }
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Face\Landmarks::getLandmark()
+  name: getLandmark
+  id: getLandmark
+  parent: \Google\Cloud\Vision\Annotation\Face\Landmarks
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: mixed
+    name: type

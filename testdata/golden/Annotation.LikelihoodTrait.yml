@@ -1,0 +1,26 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\LikelihoodTrait
+  name: LikelihoodTrait
+  id: LikelihoodTrait
+  summary: Provide likelihood functionality to annotation features.
+  type: trait
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\LikelihoodTrait::likelihood()
+  status: deprecated
+- uid: \Google\Cloud\Vision\Annotation\LikelihoodTrait::likelihood()
+  name: likelihood
+  id: likelihood
+  parent: \Google\Cloud\Vision\Annotation\LikelihoodTrait
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: value
+    description: The value name
+  - type: string
+    name: strength
+    description: The strength to test with

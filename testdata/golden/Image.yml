@@ -1,0 +1,280 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Image
+  name: Image
+  id: Image
+  summary: |-
+    Represents an image to be annotated using
+    [Google Cloud Vision](https://cloud.google.com/vision).
+
+    Please review [Pricing](https://cloud.google.com/vision/docs/pricing)
+    before use, as a separate charge is incurred for each feature performed
+    on an image. When practical, caching of results is certainly recommended.
+
+    The Cloud Vision API supports a variety of image file formats, including
+    JPEG, PNG8, PNG24, Animated GIF (first frame only), and RAW.
+
+    Cloud Vision sets upper limits on file size as well as on the total
+    combined size of all images in a request. Reducing your file size can
+    significantly improve throughput; however, be careful not to reduce image
+    quality in the process. See
+    [Best Practices - Image Sizing](https://cloud.google.com/vision/docs/best-practices#image_sizing)
+    for current file size limits.
+
+    Example:
+    ```
+    //[snippet=default]
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [
+        'FACE_DETECTION'
+    ]);
+    ```
+
+    ```
+    //[snippet=direct]
+    // Images can be directly instantiated.
+    use Google\Cloud\Vision\Image;
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = new Image($imageResource, [
+        'FACE_DETECTION'
+    ]);
+    ```
+
+    ```
+    //[snippet=string]
+    // Image data can be given as a string
+
+    use Google\Cloud\Vision\Image;
+
+    $imageData = file_get_contents(__DIR__ .'/assets/family-photo.jpg');
+    $image = new Image($imageData, [
+       'FACE_DETECTION'
+    ]);
+    ```
+
+    ```
+    //[snippet=gcs]
+    // Files stored in Google Cloud Storage can be used.
+    use Google\Cloud\Storage\StorageClient;
+    use Google\Cloud\Vision\Image;
+
+    $storage = new StorageClient();
+    $file = $storage->bucket('my-test-bucket')->object('family-photo.jpg');
+    $image = new Image($file, [
+        'FACE_DETECTION'
+    ]);
+    ```
+
+    ```
+    //[snippet=max]
+    // This example sets a maximum results limit on one feature and provides some image context.
+
+    use Google\Cloud\Vision\Image;
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = new Image($imageResource, [
+        'FACE_DETECTION',
+        'LOGO_DETECTION'
+    ], [
+        'maxResults' => [
+            'FACE_DETECTION' => 1
+        ],
+        'imageContext' => [
+            'latLongRect' => [
+                'minLatLng' => [
+                    'latitude' => '-45.0',
+                    'longitude' => '-45.0'
+                ],
+                'maxLatLng' => [
+                    'latitude' => '45.0',
+                    'longitude' => '45.0'
+                ]
+            ]
+        ]
+    ]);
+    ```
+
+    ```
+    //[snippet=shortcut]
+    // The client library also offers shortcut names which can be used in place of the longer feature names.
+
+    use Google\Cloud\Vision\Image;
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = new Image($imageResource, [
+        'faces',          // Corresponds to `FACE_DETECTION`
+        'landmarks',      // Corresponds to `LANDMARK_DETECTION`
+        'logos',          // Corresponds to `LOGO_DETECTION`
+        'labels',         // Corresponds to `LABEL_DETECTION`
+        'text',           // Corresponds to `TEXT_DETECTION`,
+        'document',       // Corresponds to `DOCUMENT_TEXT_DETECTION`
+        'safeSearch',     // Corresponds to `SAFE_SEARCH_DETECTION`
+        'imageProperties',// Corresponds to `IMAGE_PROPERTIES`
+        'crop',           // Corresponds to `CROP_HINTS`
+        'web'             // Corresponds to `WEB_DETECTION`
+    ]);
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Image::__construct()
+  - \Google\Cloud\Vision\Image::requestObject()
+  - \Google\Cloud\Vision\Image::imageObject()
+  - \Google\Cloud\Vision\Image::normalizeFeatures()
+  - \Google\Cloud\Vision\Image::maxResult()
+  - \Google\Cloud\Vision\Image::TYPE_BYTES
+  - \Google\Cloud\Vision\Image::TYPE_STRING
+  - \Google\Cloud\Vision\Image::TYPE_URI
+  status: deprecated
+  properties:
+  - type: mixed
+    name: image
+  - type: string
+    name: type
+  - type: array
+    name: features
+  - type: array
+    name: options
+  - type: array
+    name: featureShortNames
+    description: A map of short names to identifiers recognized by Cloud Vision.
+  - type: array
+    name: urlSchemes
+    description: A list of allowed url schemes.
+- uid: \Google\Cloud\Vision\Image::__construct()
+  name: __construct
+  id: __construct
+  summary: Create an image with all required configuration.
+  parent: \Google\Cloud\Vision\Image
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Storage\StorageObject
+    name: image
+    description: An image to configure with the given settings. This parameter will
+      accept a resource, a string of bytes, the URI of an image in a publicly-accessible
+      web location, or an instance of {@see}.
+  - type: array
+    name: features
+    description: A list of cloud vision [features](https://cloud.google.com/vision/reference/rest/v1/images/annotate#type)
+      to apply to the image. Google Cloud Platform Client Library provides a set of
+      abbreviated names which can be used in the interest of brevity in place of the
+      names offered by the cloud vision service. These names are `faces`, `landmarks`,
+      `logos`, `labels`, `text`, `document`, `safeSearch`, `imageProperties`, `crop`,
+      and `web`.
+  - type: array
+    name: options
+    description: '{     Configuration Options      @type array $maxResults A list
+      of features and the maximum number of           results to return. Keys should
+      correspond to feature names           given in the `$features` array, and values
+      should be of type           int. In all cases where `$maxResults` does not contain
+      a value           for a feature, all results will be returned. In cases where           a
+      `$maxResults` value is specified, the cloud vision service           will return
+      results up to the `$maxResults` value, or the full           results, whichever
+      is fewer.     @type array $imageContext See           [ImageContext](https://cloud.google.com/vision/reference/rest/v1/images/annotate#imagecontext)           for
+      full usage details. }'
+- uid: \Google\Cloud\Vision\Image::requestObject()
+  name: requestObject
+  id: requestObject
+  summary: |-
+    Return a formatted annotate image request.
+
+    This method is used internally by {@see}
+    and is not generally intended for use outside of that context.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\Image;
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = new Image($imageResource, [
+        'FACE_DETECTION'
+    ]);
+
+    $requestObj = $image->requestObject();
+    ```
+  parent: \Google\Cloud\Vision\Image
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: bool
+    name: encode
+    description: '[optional] If set to true, image bytes will be base64-encoded (required
+      for json/rest requests)'
+- uid: \Google\Cloud\Vision\Image::imageObject()
+  name: imageObject
+  id: imageObject
+  summary: |-
+    Create an image object.
+
+    The structure of the returned array will vary depending on whether the
+    given image is a storage object or not.
+  parent: \Google\Cloud\Vision\Image
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: bool
+    name: encode
+    description: If set to true, image bytes will be base64-encoded
+- uid: \Google\Cloud\Vision\Image::normalizeFeatures()
+  name: normalizeFeatures
+  id: normalizeFeatures
+  summary: |-
+    Normalizes short feature names to identifiers compatible with the vision
+    API and adds maxResults if specified.
+  parent: \Google\Cloud\Vision\Image
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: features
+- uid: \Google\Cloud\Vision\Image::maxResult()
+  name: maxResult
+  id: maxResult
+  summary: |-
+    Identify and return a maxResults value for a given feature, if maxResults
+    is specified.
+  parent: \Google\Cloud\Vision\Image
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: feature
+- uid: \Google\Cloud\Vision\Image::TYPE_BYTES
+  name: TYPE_BYTES
+  id: TYPE_BYTES
+  parent: \Google\Cloud\Vision\Image
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''bytes'''
+- uid: \Google\Cloud\Vision\Image::TYPE_STRING
+  name: TYPE_STRING
+  id: TYPE_STRING
+  parent: \Google\Cloud\Vision\Image
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''string'''
+- uid: \Google\Cloud\Vision\Image::TYPE_URI
+  name: TYPE_URI
+  id: TYPE_URI
+  parent: \Google\Cloud\Vision\Image
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''uri'''

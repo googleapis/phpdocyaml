@@ -1,0 +1,214 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  name: WebPage
+  id: WebPage
+  summary: |-
+    Metadata for web pages.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.WebDetection.WebPage</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::__construct()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::getUrl()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::setUrl()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::getScore()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::setScore()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::getPageTitle()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::setPageTitle()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::getFullMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::setFullMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::getPartialMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection\WebPage::setPartialMatchingImages()
+  properties:
+  - name: url
+    description: |-
+      The result web page URL.
+
+      Generated from protobuf field <code>string url = 1;</code>
+  - name: score
+    description: |-
+      (Deprecated) Overall relevancy score for the web page.
+
+      Generated from protobuf field <code>float score = 2;</code>
+  - name: page_title
+    description: |-
+      Title for the web page, may contain HTML markups.
+
+      Generated from protobuf field <code>string page_title = 3;</code>
+  - name: full_matching_images
+    description: |-
+      Fully matching images on the page.
+
+      Can include resized copies of the query image.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 4;</code>
+  - name: partial_matching_images
+    description: |-
+      Partial matching images on the page.
+
+      Those images are similar enough to share some key-point features. For
+      example an original image will likely have partial matching for its
+      crops.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 5;</code>
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      string $url           The result web page URL.     @type float $score           (Deprecated)
+      Overall relevancy score for the web page.     @type string $page_title           Title
+      for the web page, may contain HTML markups.     @type \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+      $full_matching_images           Fully matching images on the page.           Can
+      include resized copies of the query image.     @type \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+      $partial_matching_images           Partial matching images on the page.           Those
+      images are similar enough to share some key-point features. For           example
+      an original image will likely have partial matching for its           crops.
+      }'
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::getUrl()
+  name: getUrl
+  id: getUrl
+  summary: |-
+    The result web page URL.
+
+    Generated from protobuf field <code>string url = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::setUrl()
+  name: setUrl
+  id: setUrl
+  summary: |-
+    The result web page URL.
+
+    Generated from protobuf field <code>string url = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::getScore()
+  name: getScore
+  id: getScore
+  summary: |-
+    (Deprecated) Overall relevancy score for the web page.
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::setScore()
+  name: setScore
+  id: setScore
+  summary: |-
+    (Deprecated) Overall relevancy score for the web page.
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: float
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::getPageTitle()
+  name: getPageTitle
+  id: getPageTitle
+  summary: |-
+    Title for the web page, may contain HTML markups.
+
+    Generated from protobuf field <code>string page_title = 3;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::setPageTitle()
+  name: setPageTitle
+  id: setPageTitle
+  summary: |-
+    Title for the web page, may contain HTML markups.
+
+    Generated from protobuf field <code>string page_title = 3;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::getFullMatchingImages()
+  name: getFullMatchingImages
+  id: getFullMatchingImages
+  summary: |-
+    Fully matching images on the page.
+
+    Can include resized copies of the query image.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 4;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::setFullMatchingImages()
+  name: setFullMatchingImages
+  id: setFullMatchingImages
+  summary: |-
+    Fully matching images on the page.
+
+    Can include resized copies of the query image.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 4;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::getPartialMatchingImages()
+  name: getPartialMatchingImages
+  id: getPartialMatchingImages
+  summary: |-
+    Partial matching images on the page.
+
+    Those images are similar enough to share some key-point features. For
+    example an original image will likely have partial matching for its
+    crops.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 5;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebPage::setPartialMatchingImages()
+  name: setPartialMatchingImages
+  id: setPartialMatchingImages
+  summary: |-
+    Partial matching images on the page.
+
+    Those images are similar enough to share some key-point features. For
+    example an original image will likely have partial matching for its
+    crops.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 5;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebPage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection_WebLabel
+  name: WebDetection_WebLabel
+  id: WebDetection_WebLabel
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\WebDetection\WebLabel
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

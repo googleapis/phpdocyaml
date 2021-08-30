@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ProductSearchClient
+  name: ProductSearchClient
+  id: ProductSearchClient
+  summary: |-
+    Service Description: Manages Products and ProductSets of reference images for use in product
+    search. It uses the following resource model:
+  type: class
+  langs:
+  - php
+  inheritedMembers:
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$serviceScopes
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$locationNameTemplate
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$productNameTemplate
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$productSetNameTemplate
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$referenceImageNameTemplate
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$pathTemplateMap
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::$operationsClient
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getClientDefaults()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getLocationNameTemplate()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getProductNameTemplate()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getProductSetNameTemplate()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getReferenceImageNameTemplate()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getPathTemplateMap()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::locationName()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::productName()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::productSetName()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::referenceImageName()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::parseName()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getOperationsClient()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::resumeOperation()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::__construct()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::addProductToProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::createProduct()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::createProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::createReferenceImage()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::deleteProduct()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::deleteProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::deleteReferenceImage()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getProduct()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::getReferenceImage()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::importProductSets()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::listProductSets()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::listProducts()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::listProductsInProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::listReferenceImages()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::purgeProducts()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::removeProductFromProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::updateProduct()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::updateProductSet()
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::SERVICE_NAME
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::SERVICE_ADDRESS
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::DEFAULT_SERVICE_PORT
+  - \Google\Cloud\Vision\V1\Gapic\ProductSearchGapicClient::CODEGEN_NAME

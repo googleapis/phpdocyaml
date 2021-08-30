@@ -1,0 +1,255 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection
+  name: WebDetection
+  id: WebDetection
+  summary: |-
+    Relevant information for the image from the Internet.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.WebDetection</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\WebDetection::__construct()
+  - \Google\Cloud\Vision\V1\WebDetection::getWebEntities()
+  - \Google\Cloud\Vision\V1\WebDetection::setWebEntities()
+  - \Google\Cloud\Vision\V1\WebDetection::getFullMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::setFullMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::getPartialMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::setPartialMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::getPagesWithMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::setPagesWithMatchingImages()
+  - \Google\Cloud\Vision\V1\WebDetection::getVisuallySimilarImages()
+  - \Google\Cloud\Vision\V1\WebDetection::setVisuallySimilarImages()
+  - \Google\Cloud\Vision\V1\WebDetection::getBestGuessLabels()
+  - \Google\Cloud\Vision\V1\WebDetection::setBestGuessLabels()
+  properties:
+  - name: web_entities
+    description: |-
+      Deduced entities from similar images on the Internet.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebEntity web_entities = 1;</code>
+  - name: full_matching_images
+    description: |-
+      Fully matching images from the Internet.
+
+      Can include resized copies of the query image.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 2;</code>
+  - name: partial_matching_images
+    description: |-
+      Partial matching images from the Internet.
+
+      Those images are similar enough to share some key-point features. For
+      example an original image will likely have partial matching for its crops.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 3;</code>
+  - name: pages_with_matching_images
+    description: |-
+      Web pages containing the matching images from the Internet.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebPage pages_with_matching_images = 4;</code>
+  - name: visually_similar_images
+    description: |-
+      The visually similar image results.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage visually_similar_images = 6;</code>
+  - name: best_guess_labels
+    description: |-
+      The service's best guess as to the topic of the request image.
+
+      Inferred from similar images on the open web.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebLabel best_guess_labels = 8;</code>
+- uid: \Google\Cloud\Vision\V1\WebDetection::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\WebDetection\WebEntity[]|\Google\Protobuf\Internal\RepeatedField
+      $web_entities           Deduced entities from similar images on the Internet.     @type
+      \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+      $full_matching_images           Fully matching images from the Internet.           Can
+      include resized copies of the query image.     @type \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+      $partial_matching_images           Partial matching images from the Internet.           Those
+      images are similar enough to share some key-point features. For           example
+      an original image will likely have partial matching for its crops.     @type
+      \Google\Cloud\Vision\V1\WebDetection\WebPage[]|\Google\Protobuf\Internal\RepeatedField
+      $pages_with_matching_images           Web pages containing the matching images
+      from the Internet.     @type \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+      $visually_similar_images           The visually similar image results.     @type
+      \Google\Cloud\Vision\V1\WebDetection\WebLabel[]|\Google\Protobuf\Internal\RepeatedField
+      $best_guess_labels           The service''s best guess as to the topic of the
+      request image.           Inferred from similar images on the open web. }'
+- uid: \Google\Cloud\Vision\V1\WebDetection::getWebEntities()
+  name: getWebEntities
+  id: getWebEntities
+  summary: |-
+    Deduced entities from similar images on the Internet.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebEntity web_entities = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setWebEntities()
+  name: setWebEntities
+  id: setWebEntities
+  summary: |-
+    Deduced entities from similar images on the Internet.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebEntity web_entities = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebEntity[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection::getFullMatchingImages()
+  name: getFullMatchingImages
+  id: getFullMatchingImages
+  summary: |-
+    Fully matching images from the Internet.
+
+    Can include resized copies of the query image.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setFullMatchingImages()
+  name: setFullMatchingImages
+  id: setFullMatchingImages
+  summary: |-
+    Fully matching images from the Internet.
+
+    Can include resized copies of the query image.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage full_matching_images = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection::getPartialMatchingImages()
+  name: getPartialMatchingImages
+  id: getPartialMatchingImages
+  summary: |-
+    Partial matching images from the Internet.
+
+    Those images are similar enough to share some key-point features. For
+    example an original image will likely have partial matching for its crops.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 3;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setPartialMatchingImages()
+  name: setPartialMatchingImages
+  id: setPartialMatchingImages
+  summary: |-
+    Partial matching images from the Internet.
+
+    Those images are similar enough to share some key-point features. For
+    example an original image will likely have partial matching for its crops.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage partial_matching_images = 3;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection::getPagesWithMatchingImages()
+  name: getPagesWithMatchingImages
+  id: getPagesWithMatchingImages
+  summary: |-
+    Web pages containing the matching images from the Internet.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebPage pages_with_matching_images = 4;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setPagesWithMatchingImages()
+  name: setPagesWithMatchingImages
+  id: setPagesWithMatchingImages
+  summary: |-
+    Web pages containing the matching images from the Internet.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebPage pages_with_matching_images = 4;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebPage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection::getVisuallySimilarImages()
+  name: getVisuallySimilarImages
+  id: getVisuallySimilarImages
+  summary: |-
+    The visually similar image results.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage visually_similar_images = 6;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setVisuallySimilarImages()
+  name: setVisuallySimilarImages
+  id: setVisuallySimilarImages
+  summary: |-
+    The visually similar image results.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebImage visually_similar_images = 6;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection::getBestGuessLabels()
+  name: getBestGuessLabels
+  id: getBestGuessLabels
+  summary: |-
+    The service's best guess as to the topic of the request image.
+
+    Inferred from similar images on the open web.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebLabel best_guess_labels = 8;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection::setBestGuessLabels()
+  name: setBestGuessLabels
+  id: setBestGuessLabels
+  summary: |-
+    The service's best guess as to the topic of the request image.
+
+    Inferred from similar images on the open web.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.WebDetection.WebLabel best_guess_labels = 8;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\WebDetection\WebLabel[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

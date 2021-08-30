@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Connection\ConnectionInterface
+  name: ConnectionInterface
+  id: ConnectionInterface
+  summary: |-
+    Represents a connection to
+    [Cloud Vision](https://cloud.google.com/vision).
+  type: interface
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Connection\ConnectionInterface::annotate()
+- uid: \Google\Cloud\Vision\Connection\ConnectionInterface::annotate()
+  name: annotate
+  id: annotate
+  parent: \Google\Cloud\Vision\Connection\ConnectionInterface
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: args

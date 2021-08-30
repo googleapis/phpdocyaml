@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\TextAnnotation_DetectedLanguage
+  name: TextAnnotation_DetectedLanguage
+  id: TextAnnotation_DetectedLanguage
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\TextAnnotation\DetectedLanguage
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

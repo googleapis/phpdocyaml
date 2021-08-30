@@ -1,0 +1,452 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  name: ImageAnnotatorClient
+  id: ImageAnnotatorClient
+  summary: |-
+    Service Description: Service that performs Google Cloud Vision API detection tasks over client
+    images, such as face, landmark, logo, label, and text detection. The
+    ImageAnnotator service returns detected entities from the images.
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::createImageObject()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::annotateImage()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::faceDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::landmarkDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::logoDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::labelDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::textDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::documentTextDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::safeSearchDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::imagePropertiesDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::cropHintsDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::webDetection()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::objectLocalization()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::productSearch()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorClient::annotateSingleFeature()
+  inheritedMembers:
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::$serviceScopes
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::$operationsClient
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::getClientDefaults()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::getOperationsClient()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::resumeOperation()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::__construct()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::asyncBatchAnnotateFiles()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::asyncBatchAnnotateImages()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::batchAnnotateFiles()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::batchAnnotateImages()
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::SERVICE_NAME
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::SERVICE_ADDRESS
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::DEFAULT_SERVICE_PORT
+  - \Google\Cloud\Vision\V1\Gapic\ImageAnnotatorGapicClient::CODEGEN_NAME
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::createImageObject()
+  name: createImageObject
+  id: createImageObject
+  summary: |-
+    Creates an Image object that can be used as part of an image annotation request.
+
+    Example:
+    ```
+    //[snippet=resource]
+    $imageResource = fopen('path/to/image.jpg', 'r');
+    $image = $imageAnnotatorClient->createImageObject($imageResource);
+    $response = $imageAnnotatorClient->faceDetection($image);
+    ```
+
+    ```
+    //[snippet=data]
+    $imageData = file_get_contents('path/to/image.jpg');
+    $image = $imageAnnotatorClient->createImageObject($imageData);
+    $response = $imageAnnotatorClient->faceDetection($image);
+    ```
+
+    ```
+    //[snippet=url]
+    $imageUri = "gs://my-bucket/image.jpg";
+    $image = $imageAnnotatorClient->createImageObject($imageUri);
+    $response = $imageAnnotatorClient->faceDetection($image);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string
+    name: imageInput
+    description: An image to configure with the given settings. This parameter will
+      accept a resource, a string of bytes, or the URI of an image in a publicly-accessible
+      web location.
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::annotateImage()
+  name: annotateImage
+  id: annotateImage
+  summary: |-
+    Run image detection and annotation for an image.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\V1\Feature;
+    use Google\Cloud\Vision\V1\Feature\Type;
+
+    $imageResource = fopen('path/to/image.jpg', 'r');
+    $features = [Type::FACE_DETECTION];
+    $response = $imageAnnotatorClient->annotateImage($imageResource, $features);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: \Google\Cloud\Vision\V1\Feature[]|int[]
+    name: features
+    description: Requested features.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::faceDetection()
+  name: faceDetection
+  id: faceDetection
+  summary: |-
+    Run face detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->faceDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::landmarkDetection()
+  name: landmarkDetection
+  id: landmarkDetection
+  summary: |-
+    Run landmark detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->landmarkDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::logoDetection()
+  name: logoDetection
+  id: logoDetection
+  summary: |-
+    Run logo detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->logoDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::labelDetection()
+  name: labelDetection
+  id: labelDetection
+  summary: |-
+    Run label detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->labelDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::textDetection()
+  name: textDetection
+  id: textDetection
+  summary: |-
+    Run text detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->textDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::documentTextDetection()
+  name: documentTextDetection
+  id: documentTextDetection
+  summary: |-
+    Run document text detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->documentTextDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::safeSearchDetection()
+  name: safeSearchDetection
+  id: safeSearchDetection
+  summary: |-
+    Run safe search detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->safeSearchDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::imagePropertiesDetection()
+  name: imagePropertiesDetection
+  id: imagePropertiesDetection
+  summary: |-
+    Run image properties detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->imagePropertiesDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::cropHintsDetection()
+  name: cropHintsDetection
+  id: cropHintsDetection
+  summary: |-
+    Run crop hints detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->cropHintsDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::webDetection()
+  name: webDetection
+  id: webDetection
+  summary: |-
+    Run web detection for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->webDetection($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::objectLocalization()
+  name: objectLocalization
+  id: objectLocalization
+  summary: |-
+    Run object localization for an image.
+
+    Example:
+    ```
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $response = $imageAnnotatorClient->objectLocalization($imageContent);
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::productSearch()
+  name: productSearch
+  id: productSearch
+  summary: |-
+    Run product search for an image.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\V1\ProductSearchClient;
+    use Google\Cloud\Vision\V1\ProductSearchParams;
+
+    $imageContent = file_get_contents('path/to/image.jpg');
+    $productSetName = ProductSearchClient::productSetName('PROJECT_ID', 'LOC_ID', 'PRODUCT_SET_ID');
+    $productSearchParams = (new ProductSearchParams)
+        ->setProductSet($productSetName);
+    $response = $imageAnnotatorClient->productSearch(
+        $imageContent,
+        $productSearchParams
+    );
+    ```
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Vision\V1\Image
+    name: image
+    description: The image to be processed.
+  - type: \Google\Cloud\Vision\V1\ProductSearchParams
+    name: productSearchParams
+    description: Parameters for a product search request. Please note, this value
+      will override the {@see} in the {@see} instance if provided.
+  - type: array
+    name: optionalArgs
+    description: '{     Configuration Options.      @type ImageContext        $imageContext  Additional
+      context that may accompany the image.     @type RetrySettings|array $retrySettings          Retry
+      settings to use for this call. Can be a          {@see} object, or an associative
+      array          of retry settings parameters. See the documentation on          {@see}
+      for example usage. }'
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorClient::annotateSingleFeature()
+  name: annotateSingleFeature
+  id: annotateSingleFeature
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\Image
+    name: image
+  - type: \Google\Cloud\Vision\V1\Feature|int
+    name: featureType
+  - type: array
+    name: optionalArgs

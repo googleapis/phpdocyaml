@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection_WebPage
+  name: WebDetection_WebPage
+  id: WebDetection_WebPage
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\WebDetection\WebPage
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

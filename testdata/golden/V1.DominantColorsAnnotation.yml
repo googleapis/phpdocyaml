@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\DominantColorsAnnotation
+  name: DominantColorsAnnotation
+  id: DominantColorsAnnotation
+  summary: |-
+    Set of dominant colors and their corresponding scores.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.DominantColorsAnnotation</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\DominantColorsAnnotation::__construct()
+  - \Google\Cloud\Vision\V1\DominantColorsAnnotation::getColors()
+  - \Google\Cloud\Vision\V1\DominantColorsAnnotation::setColors()
+  properties:
+  - name: colors
+    description: |-
+      RGB color values with their score and pixel fraction.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.ColorInfo colors = 1;</code>
+- uid: \Google\Cloud\Vision\V1\DominantColorsAnnotation::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\DominantColorsAnnotation
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\ColorInfo[]|\Google\Protobuf\Internal\RepeatedField
+      $colors           RGB color values with their score and pixel fraction. }'
+- uid: \Google\Cloud\Vision\V1\DominantColorsAnnotation::getColors()
+  name: getColors
+  id: getColors
+  summary: |-
+    RGB color values with their score and pixel fraction.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.ColorInfo colors = 1;</code>
+  parent: \Google\Cloud\Vision\V1\DominantColorsAnnotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\DominantColorsAnnotation::setColors()
+  name: setColors
+  id: setColors
+  summary: |-
+    RGB color values with their score and pixel fraction.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.ColorInfo colors = 1;</code>
+  parent: \Google\Cloud\Vision\V1\DominantColorsAnnotation
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\ColorInfo[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

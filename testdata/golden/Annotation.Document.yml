@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Document
+  name: Document
+  id: Document
+  summary: |-
+    Represents a Document Text Detection result.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/the-constitution.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'DOCUMENT_TEXT_DETECTION' ]);
+    $annotation = $vision->annotate($image);
+
+    $document = $annotation->fullText();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Document::__construct()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\Document::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\Annotation\Document
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: Document Text Annotation response.

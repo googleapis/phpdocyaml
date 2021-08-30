@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\FaceAnnotation_Landmark
+  name: FaceAnnotation_Landmark
+  id: FaceAnnotation_Landmark
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\FaceAnnotation\Landmark
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

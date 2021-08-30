@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\AbstractFeature
+  name: AbstractFeature
+  id: AbstractFeature
+  summary: Provide shared functionality for features
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+  status: deprecated
+  implements:
+  - \Google\Cloud\Vision\Annotation\FeatureInterface
+  properties:
+  - type: array
+    name: info
+- uid: \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+  name: info
+  id: info
+  summary: |-
+    Get the raw annotation result
+
+    Example:
+    ```
+    $info = $imageProperties->info();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\AbstractFeature
+  type: method
+  langs:
+  - php

@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex
+  name: NormalizedVertex
+  id: NormalizedVertex
+  summary: |-
+    A vertex represents a 2D point in the image.
+
+    NOTE: the normalized vertex coordinates are relative to the original image
+    and range from 0 to 1.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.NormalizedVertex</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\NormalizedVertex::__construct()
+  - \Google\Cloud\Vision\V1\NormalizedVertex::getX()
+  - \Google\Cloud\Vision\V1\NormalizedVertex::setX()
+  - \Google\Cloud\Vision\V1\NormalizedVertex::getY()
+  - \Google\Cloud\Vision\V1\NormalizedVertex::setY()
+  properties:
+  - name: x
+    description: |-
+      X coordinate.
+
+      Generated from protobuf field <code>float x = 1;</code>
+  - name: "y"
+    description: |-
+      Y coordinate.
+
+      Generated from protobuf field <code>float y = 2;</code>
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\NormalizedVertex
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      float $x           X coordinate.     @type float $y           Y coordinate.
+      }'
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex::getX()
+  name: getX
+  id: getX
+  summary: |-
+    X coordinate.
+
+    Generated from protobuf field <code>float x = 1;</code>
+  parent: \Google\Cloud\Vision\V1\NormalizedVertex
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex::setX()
+  name: setX
+  id: setX
+  summary: |-
+    X coordinate.
+
+    Generated from protobuf field <code>float x = 1;</code>
+  parent: \Google\Cloud\Vision\V1\NormalizedVertex
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: float
+    name: var
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex::getY()
+  name: getY
+  id: getY
+  summary: |-
+    Y coordinate.
+
+    Generated from protobuf field <code>float y = 2;</code>
+  parent: \Google\Cloud\Vision\V1\NormalizedVertex
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\NormalizedVertex::setY()
+  name: setY
+  id: setY
+  summary: |-
+    Y coordinate.
+
+    Generated from protobuf field <code>float y = 2;</code>
+  parent: \Google\Cloud\Vision\V1\NormalizedVertex
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: float
+    name: var

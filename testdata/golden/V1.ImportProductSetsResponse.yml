@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  name: ImportProductSetsResponse
+  id: ImportProductSetsResponse
+  summary: |-
+    Response message for the `ImportProductSets` method.
+
+    This message is returned by the
+    [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
+    [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.ImportProductSetsResponse</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\ImportProductSetsResponse::__construct()
+  - \Google\Cloud\Vision\V1\ImportProductSetsResponse::getReferenceImages()
+  - \Google\Cloud\Vision\V1\ImportProductSetsResponse::setReferenceImages()
+  - \Google\Cloud\Vision\V1\ImportProductSetsResponse::getStatuses()
+  - \Google\Cloud\Vision\V1\ImportProductSetsResponse::setStatuses()
+  properties:
+  - name: reference_images
+    description: |-
+      The list of reference_images that are imported successfully.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.ReferenceImage reference_images = 1;</code>
+  - name: statuses
+    description: |-
+      The rpc status for each ImportProductSet request, including both successes
+      and errors.
+
+      The number of statuses here matches the number of lines in the csv file,
+      and statuses[i] stores the success or failure status of processing the i-th
+      line of the csv, starting from line 0.
+
+      Generated from protobuf field <code>repeated .google.rpc.Status statuses = 2;</code>
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\ReferenceImage[]|\Google\Protobuf\Internal\RepeatedField
+      $reference_images           The list of reference_images that are imported successfully.     @type
+      \Google\Rpc\Status[]|\Google\Protobuf\Internal\RepeatedField $statuses           The
+      rpc status for each ImportProductSet request, including both successes           and
+      errors.           The number of statuses here matches the number of lines in
+      the csv file,           and statuses[i] stores the success or failure status
+      of processing the i-th           line of the csv, starting from line 0. }'
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse::getReferenceImages()
+  name: getReferenceImages
+  id: getReferenceImages
+  summary: |-
+    The list of reference_images that are imported successfully.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.ReferenceImage reference_images = 1;</code>
+  parent: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse::setReferenceImages()
+  name: setReferenceImages
+  id: setReferenceImages
+  summary: |-
+    The list of reference_images that are imported successfully.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.ReferenceImage reference_images = 1;</code>
+  parent: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\ReferenceImage[]|\Google\Protobuf\Internal\RepeatedField
+    name: var
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse::getStatuses()
+  name: getStatuses
+  id: getStatuses
+  summary: |-
+    The rpc status for each ImportProductSet request, including both successes
+    and errors.
+
+    The number of statuses here matches the number of lines in the csv file,
+    and statuses[i] stores the success or failure status of processing the i-th
+    line of the csv, starting from line 0.
+
+    Generated from protobuf field <code>repeated .google.rpc.Status statuses = 2;</code>
+  parent: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ImportProductSetsResponse::setStatuses()
+  name: setStatuses
+  id: setStatuses
+  summary: |-
+    The rpc status for each ImportProductSet request, including both successes
+    and errors.
+
+    The number of statuses here matches the number of lines in the csv file,
+    and statuses[i] stores the success or failure status of processing the i-th
+    line of the csv, starting from line 0.
+
+    Generated from protobuf field <code>repeated .google.rpc.Status statuses = 2;</code>
+  parent: \Google\Cloud\Vision\V1\ImportProductSetsResponse
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Rpc\Status[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

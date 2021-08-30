@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\FeatureInterface
+  name: FeatureInterface
+  id: FeatureInterface
+  summary: Define shared functionality for annotation features.
+  type: interface
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\FeatureInterface::info()
+  - \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_HIGH
+  - \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_MEDIUM
+  - \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_LOW
+  status: deprecated
+- uid: \Google\Cloud\Vision\Annotation\FeatureInterface::info()
+  name: info
+  id: info
+  parent: \Google\Cloud\Vision\Annotation\FeatureInterface
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_HIGH
+  name: STRENGTH_HIGH
+  id: STRENGTH_HIGH
+  parent: \Google\Cloud\Vision\Annotation\FeatureInterface
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''high'''
+- uid: \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_MEDIUM
+  name: STRENGTH_MEDIUM
+  id: STRENGTH_MEDIUM
+  parent: \Google\Cloud\Vision\Annotation\FeatureInterface
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''medium'''
+- uid: \Google\Cloud\Vision\Annotation\FeatureInterface::STRENGTH_LOW
+  name: STRENGTH_LOW
+  id: STRENGTH_LOW
+  parent: \Google\Cloud\Vision\Annotation\FeatureInterface
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''low'''

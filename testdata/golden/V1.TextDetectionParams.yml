@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\TextDetectionParams
+  name: TextDetectionParams
+  id: TextDetectionParams
+  summary: |-
+    Parameters for text detections. This is used to control TEXT_DETECTION and
+    DOCUMENT_TEXT_DETECTION features.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.TextDetectionParams</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\TextDetectionParams::__construct()
+  - \Google\Cloud\Vision\V1\TextDetectionParams::getEnableTextDetectionConfidenceScore()
+  - \Google\Cloud\Vision\V1\TextDetectionParams::setEnableTextDetectionConfidenceScore()
+  properties:
+  - name: enable_text_detection_confidence_score
+    description: |-
+      By default, Cloud Vision API only includes confidence score for
+      DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence
+      score for TEXT_DETECTION as well.
+
+      Generated from protobuf field <code>bool enable_text_detection_confidence_score = 9;</code>
+- uid: \Google\Cloud\Vision\V1\TextDetectionParams::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\TextDetectionParams
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      bool $enable_text_detection_confidence_score           By default, Cloud Vision
+      API only includes confidence score for           DOCUMENT_TEXT_DETECTION result.
+      Set the flag to true to include confidence           score for TEXT_DETECTION
+      as well. }'
+- uid: \Google\Cloud\Vision\V1\TextDetectionParams::getEnableTextDetectionConfidenceScore()
+  name: getEnableTextDetectionConfidenceScore
+  id: getEnableTextDetectionConfidenceScore
+  summary: |-
+    By default, Cloud Vision API only includes confidence score for
+    DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence
+    score for TEXT_DETECTION as well.
+
+    Generated from protobuf field <code>bool enable_text_detection_confidence_score = 9;</code>
+  parent: \Google\Cloud\Vision\V1\TextDetectionParams
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\TextDetectionParams::setEnableTextDetectionConfidenceScore()
+  name: setEnableTextDetectionConfidenceScore
+  id: setEnableTextDetectionConfidenceScore
+  summary: |-
+    By default, Cloud Vision API only includes confidence score for
+    DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence
+    score for TEXT_DETECTION as well.
+
+    Generated from protobuf field <code>bool enable_text_detection_confidence_score = 9;</code>
+  parent: \Google\Cloud\Vision\V1\TextDetectionParams
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: bool
+    name: var

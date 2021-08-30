@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  name: ImageAnnotatorGrpcClient
+  id: ImageAnnotatorGrpcClient
+  summary: |-
+    Service that performs Google Cloud Vision API detection tasks over client
+    images, such as face, landmark, logo, label, and text detection. The
+    ImageAnnotator service returns detected entities from the images.
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::__construct()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::BatchAnnotateImages()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::BatchAnnotateFiles()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::AsyncBatchAnnotateImages()
+  - \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::AsyncBatchAnnotateFiles()
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: hostname
+    description: hostname
+  - type: array
+    name: opts
+    description: channel options
+  - type: \Grpc\Channel
+    name: channel
+    description: (optional) re-use channel object
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::BatchAnnotateImages()
+  name: BatchAnnotateImages
+  id: BatchAnnotateImages
+  summary: Run image detection and annotation for a batch of images.
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\BatchAnnotateImagesRequest
+    name: argument
+    description: input argument
+  - type: array
+    name: metadata
+    description: metadata
+  - type: array
+    name: options
+    description: call options
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::BatchAnnotateFiles()
+  name: BatchAnnotateFiles
+  id: BatchAnnotateFiles
+  summary: |-
+    Service that performs image detection and annotation for a batch of files.
+
+    Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+
+    This service will extract at most 5 (customers can specify which 5 in
+    AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+    file provided and perform detection and annotation for each image
+    extracted.
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\BatchAnnotateFilesRequest
+    name: argument
+    description: input argument
+  - type: array
+    name: metadata
+    description: metadata
+  - type: array
+    name: options
+    description: call options
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::AsyncBatchAnnotateImages()
+  name: AsyncBatchAnnotateImages
+  id: AsyncBatchAnnotateImages
+  summary: |-
+    Run asynchronous image detection and annotation for a list of images.
+
+    Progress and results can be retrieved through the
+    `google.longrunning.Operations` interface.
+    `Operation.metadata` contains `OperationMetadata` (metadata).
+    `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+
+    This service will write image annotation outputs to json files in customer
+    GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\AsyncBatchAnnotateImagesRequest
+    name: argument
+    description: input argument
+  - type: array
+    name: metadata
+    description: metadata
+  - type: array
+    name: options
+    description: call options
+- uid: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient::AsyncBatchAnnotateFiles()
+  name: AsyncBatchAnnotateFiles
+  id: AsyncBatchAnnotateFiles
+  summary: |-
+    Run asynchronous image detection and annotation for a list of generic
+    files, such as PDF files, which may contain multiple pages and multiple
+    images per page. Progress and results can be retrieved through the
+    `google.longrunning.Operations` interface.
+
+    `Operation.metadata` contains `OperationMetadata` (metadata).
+    `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+  parent: \Google\Cloud\Vision\V1\ImageAnnotatorGrpcClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\AsyncBatchAnnotateFilesRequest
+    name: argument
+    description: input argument
+  - type: array
+    name: metadata
+    description: metadata
+  - type: array
+    name: options
+    description: call options

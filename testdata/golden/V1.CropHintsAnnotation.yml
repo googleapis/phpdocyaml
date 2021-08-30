@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\CropHintsAnnotation
+  name: CropHintsAnnotation
+  id: CropHintsAnnotation
+  summary: |-
+    Set of crop hints that are used to generate new crops when serving images.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.CropHintsAnnotation</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\CropHintsAnnotation::__construct()
+  - \Google\Cloud\Vision\V1\CropHintsAnnotation::getCropHints()
+  - \Google\Cloud\Vision\V1\CropHintsAnnotation::setCropHints()
+  properties:
+  - name: crop_hints
+    description: |-
+      Crop hint results.
+
+      Generated from protobuf field <code>repeated .google.cloud.vision.v1.CropHint crop_hints = 1;</code>
+- uid: \Google\Cloud\Vision\V1\CropHintsAnnotation::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\CropHintsAnnotation
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\CropHint[]|\Google\Protobuf\Internal\RepeatedField $crop_hints           Crop
+      hint results. }'
+- uid: \Google\Cloud\Vision\V1\CropHintsAnnotation::getCropHints()
+  name: getCropHints
+  id: getCropHints
+  summary: |-
+    Crop hint results.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.CropHint crop_hints = 1;</code>
+  parent: \Google\Cloud\Vision\V1\CropHintsAnnotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\CropHintsAnnotation::setCropHints()
+  name: setCropHints
+  id: setCropHints
+  summary: |-
+    Crop hint results.
+
+    Generated from protobuf field <code>repeated .google.cloud.vision.v1.CropHint crop_hints = 1;</code>
+  parent: \Google\Cloud\Vision\V1\CropHintsAnnotation
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\CropHint[]|\Google\Protobuf\Internal\RepeatedField
+    name: var

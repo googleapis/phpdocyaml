@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\VisionHelpersTrait
+  name: VisionHelpersTrait
+  id: VisionHelpersTrait
+  summary: Provides helper methods for generated Vision clients.
+  type: trait
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\VisionHelpersTrait::annotateImageHelper()
+  - \Google\Cloud\Vision\VisionHelpersTrait::buildFeatureList()
+  - \Google\Cloud\Vision\VisionHelpersTrait::createImageHelper()
+- uid: \Google\Cloud\Vision\VisionHelpersTrait::annotateImageHelper()
+  name: annotateImageHelper
+  id: annotateImageHelper
+  parent: \Google\Cloud\Vision\VisionHelpersTrait
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: callable
+    name: callback
+  - type: \Google\Cloud\Vision\V1\AnnotateImageRequest|mixed
+    name: requestClass
+  - type: \Google\Cloud\Vision\Image|mixed
+    name: image
+  - type: \Google\Cloud\Vision\V1\Feature[]|int[]
+    name: features
+  - type: array
+    name: optionalArgs
+- uid: \Google\Cloud\Vision\VisionHelpersTrait::buildFeatureList()
+  name: buildFeatureList
+  id: buildFeatureList
+  parent: \Google\Cloud\Vision\VisionHelpersTrait
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: featureClass
+  - type: \Google\Cloud\Vision\V1\Feature[]|int[]
+    name: featureTypes
+- uid: \Google\Cloud\Vision\VisionHelpersTrait::createImageHelper()
+  name: createImageHelper
+  id: createImageHelper
+  parent: \Google\Cloud\Vision\VisionHelpersTrait
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: imageClass
+  - type: string
+    name: imageSourceClass
+  - type: string|resource|\Google\Cloud\Vision\Image|mixed
+    name: imageInput

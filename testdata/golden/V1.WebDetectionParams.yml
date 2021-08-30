@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetectionParams
+  name: WebDetectionParams
+  id: WebDetectionParams
+  summary: |-
+    Parameters for web detection request.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.WebDetectionParams</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\WebDetectionParams::__construct()
+  - \Google\Cloud\Vision\V1\WebDetectionParams::getIncludeGeoResults()
+  - \Google\Cloud\Vision\V1\WebDetectionParams::setIncludeGeoResults()
+  properties:
+  - name: include_geo_results
+    description: |-
+      Whether to include results derived from the geo information in the image.
+
+      Generated from protobuf field <code>bool include_geo_results = 2;</code>
+- uid: \Google\Cloud\Vision\V1\WebDetectionParams::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\WebDetectionParams
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      bool $include_geo_results           Whether to include results derived from
+      the geo information in the image. }'
+- uid: \Google\Cloud\Vision\V1\WebDetectionParams::getIncludeGeoResults()
+  name: getIncludeGeoResults
+  id: getIncludeGeoResults
+  summary: |-
+    Whether to include results derived from the geo information in the image.
+
+    Generated from protobuf field <code>bool include_geo_results = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetectionParams
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetectionParams::setIncludeGeoResults()
+  name: setIncludeGeoResults
+  id: setIncludeGeoResults
+  summary: |-
+    Whether to include results derived from the geo information in the image.
+
+    Generated from protobuf field <code>bool include_geo_results = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetectionParams
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: bool
+    name: var

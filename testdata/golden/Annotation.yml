@@ -1,0 +1,251 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation
+  name: Annotation
+  id: Annotation
+  summary: |-
+    Represents a [Google Cloud Vision](https://cloud.google.com/vision) image
+    annotation result.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [
+        'FACE_DETECTION'
+    ]);
+
+    $annotation = $vision->annotate($image);
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation::__construct()
+  - \Google\Cloud\Vision\Annotation::info()
+  - \Google\Cloud\Vision\Annotation::faces()
+  - \Google\Cloud\Vision\Annotation::landmarks()
+  - \Google\Cloud\Vision\Annotation::logos()
+  - \Google\Cloud\Vision\Annotation::labels()
+  - \Google\Cloud\Vision\Annotation::text()
+  - \Google\Cloud\Vision\Annotation::fullText()
+  - \Google\Cloud\Vision\Annotation::safeSearch()
+  - \Google\Cloud\Vision\Annotation::imageProperties()
+  - \Google\Cloud\Vision\Annotation::cropHints()
+  - \Google\Cloud\Vision\Annotation::web()
+  - \Google\Cloud\Vision\Annotation::error()
+  status: deprecated
+  properties:
+  - type: array
+    name: info
+  - type: \Google\Cloud\Vision\Annotation\Face[]|null
+    name: faces
+  - type: \Google\Cloud\Vision\Annotation\Entity[]|null
+    name: landmarks
+  - type: \Google\Cloud\Vision\Annotation\Entity[]|null
+    name: logos
+  - type: \Google\Cloud\Vision\Annotation\Entity[]|null
+    name: labels
+  - type: \Google\Cloud\Vision\Annotation\Entity[]|null
+    name: text
+  - type: \Google\Cloud\Vision\Annotation\Document|null
+    name: fullText
+  - type: \Google\Cloud\Vision\Annotation\SafeSearch|null
+    name: safeSearch
+  - type: \Google\Cloud\Vision\Annotation\ImageProperties|null
+    name: imageProperties
+  - type: \Google\Cloud\Vision\Annotation\CropHint[]|null
+    name: cropHints
+  - type: \Google\Cloud\Vision\Annotation\Web|null
+    name: web
+  - type: array|null
+    name: error
+- uid: \Google\Cloud\Vision\Annotation::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create an annotation result.
+
+    This class represents a single image annotation response from Cloud Vision. If multiple images were tested at
+    once, the result will be an array of Annotation instances.
+
+    This class is not intended to be instantiated outside the Google Cloud Platform Client Library.
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The annotation result
+- uid: \Google\Cloud\Vision\Annotation::info()
+  name: info
+  id: info
+  summary: |-
+    Return raw annotation response array
+
+    Example:
+    ```
+    $info = $annotation->info();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::faces()
+  name: faces
+  id: faces
+  summary: |-
+    Return an array of faces
+
+    Example:
+    ```
+    $faces = $annotation->faces();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::landmarks()
+  name: landmarks
+  id: landmarks
+  summary: |-
+    Return an array of landmarks
+
+    Example:
+    ```
+    $landmarks = $annotation->landmarks();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::logos()
+  name: logos
+  id: logos
+  summary: |-
+    Return an array of logos
+
+    Example:
+    ```
+    $logos = $annotation->logos();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::labels()
+  name: labels
+  id: labels
+  summary: |-
+    Return an array of labels
+
+    Example:
+    ```
+    $labels = $annotation->labels();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::text()
+  name: text
+  id: text
+  summary: |-
+    Return an array containing all text found in the image
+
+    Example:
+    ```
+    $text = $annotation->text();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::fullText()
+  name: fullText
+  id: fullText
+  summary: |-
+    Return the full text annotation.
+
+    Example:
+    ```
+    $fullText = $annotation->fullText();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::safeSearch()
+  name: safeSearch
+  id: safeSearch
+  summary: |-
+    Get the result of a safe search detection
+
+    Example:
+    ```
+    $safeSearch = $annotation->safeSearch();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::imageProperties()
+  name: imageProperties
+  id: imageProperties
+  summary: |-
+    Fetch image properties
+
+    Example:
+    ```
+    $properties = $annotation->imageProperties();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::cropHints()
+  name: cropHints
+  id: cropHints
+  summary: |-
+    Fetch Crop Hints
+
+    Example:
+    ```
+    $hints = $annotation->cropHints();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::web()
+  name: web
+  id: web
+  summary: |-
+    Fetch the Web Annotatation.
+
+    Example:
+    ```
+    $web = $annotation->web();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation::error()
+  name: error
+  id: error
+  summary: |-
+    Get error information, if present
+
+    Example:
+    ```
+    $error = $annotation->error();
+    ```
+  parent: \Google\Cloud\Vision\Annotation
+  type: method
+  langs:
+  - php

@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  name: WebImage
+  id: WebImage
+  summary: |-
+    Metadata for online images.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.WebDetection.WebImage</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\WebDetection\WebImage::__construct()
+  - \Google\Cloud\Vision\V1\WebDetection\WebImage::getUrl()
+  - \Google\Cloud\Vision\V1\WebDetection\WebImage::setUrl()
+  - \Google\Cloud\Vision\V1\WebDetection\WebImage::getScore()
+  - \Google\Cloud\Vision\V1\WebDetection\WebImage::setScore()
+  properties:
+  - name: url
+    description: |-
+      The result image URL.
+
+      Generated from protobuf field <code>string url = 1;</code>
+  - name: score
+    description: |-
+      (Deprecated) Overall relevancy score for the image.
+
+      Generated from protobuf field <code>float score = 2;</code>
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      string $url           The result image URL.     @type float $score           (Deprecated)
+      Overall relevancy score for the image. }'
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage::getUrl()
+  name: getUrl
+  id: getUrl
+  summary: |-
+    The result image URL.
+
+    Generated from protobuf field <code>string url = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage::setUrl()
+  name: setUrl
+  id: setUrl
+  summary: |-
+    The result image URL.
+
+    Generated from protobuf field <code>string url = 1;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: var
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage::getScore()
+  name: getScore
+  id: getScore
+  summary: |-
+    (Deprecated) Overall relevancy score for the image.
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\WebDetection\WebImage::setScore()
+  name: setScore
+  id: setScore
+  summary: |-
+    (Deprecated) Overall relevancy score for the image.
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\WebDetection\WebImage
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: float
+    name: var

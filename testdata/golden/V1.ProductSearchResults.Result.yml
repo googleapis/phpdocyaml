@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  name: Result
+  id: Result
+  summary: |-
+    Information about a product.
+
+    Generated from protobuf message <code>google.cloud.vision.v1.ProductSearchResults.Result</code>
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::__construct()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::getProduct()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::hasProduct()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::clearProduct()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::setProduct()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::getScore()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::setScore()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::getImage()
+  - \Google\Cloud\Vision\V1\ProductSearchResults\Result::setImage()
+  properties:
+  - name: product
+    description: |-
+      The Product.
+
+      Generated from protobuf field <code>.google.cloud.vision.v1.Product product = 1;</code>
+  - name: score
+    description: |-
+      A confidence level on the match, ranging from 0 (no confidence) to
+      1 (full confidence).
+
+      Generated from protobuf field <code>float score = 2;</code>
+  - name: image
+    description: |-
+      The resource name of the image from the product that is the closest match
+      to the query.
+
+      Generated from protobuf field <code>string image = 3;</code>
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::__construct()
+  name: __construct
+  id: __construct
+  summary: Constructor.
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: data
+    description: '{     Optional. Data for populating the Message object.      @type
+      \Google\Cloud\Vision\V1\Product $product           The Product.     @type float
+      $score           A confidence level on the match, ranging from 0 (no confidence)
+      to           1 (full confidence).     @type string $image           The resource
+      name of the image from the product that is the closest match           to the
+      query. }'
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::getProduct()
+  name: getProduct
+  id: getProduct
+  summary: |-
+    The Product.
+
+    Generated from protobuf field <code>.google.cloud.vision.v1.Product product = 1;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::hasProduct()
+  name: hasProduct
+  id: hasProduct
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::clearProduct()
+  name: clearProduct
+  id: clearProduct
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::setProduct()
+  name: setProduct
+  id: setProduct
+  summary: |-
+    The Product.
+
+    Generated from protobuf field <code>.google.cloud.vision.v1.Product product = 1;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\V1\Product
+    name: var
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::getScore()
+  name: getScore
+  id: getScore
+  summary: |-
+    A confidence level on the match, ranging from 0 (no confidence) to
+    1 (full confidence).
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::setScore()
+  name: setScore
+  id: setScore
+  summary: |-
+    A confidence level on the match, ranging from 0 (no confidence) to
+    1 (full confidence).
+
+    Generated from protobuf field <code>float score = 2;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: float
+    name: var
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::getImage()
+  name: getImage
+  id: getImage
+  summary: |-
+    The resource name of the image from the product that is the closest match
+    to the query.
+
+    Generated from protobuf field <code>string image = 3;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults\Result::setImage()
+  name: setImage
+  id: setImage
+  summary: |-
+    The resource name of the image from the product that is the closest match
+    to the query.
+
+    Generated from protobuf field <code>string image = 3;</code>
+  parent: \Google\Cloud\Vision\V1\ProductSearchResults\Result
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: string
+    name: var

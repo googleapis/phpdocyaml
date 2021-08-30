@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults_ObjectAnnotation
+  name: ProductSearchResults_ObjectAnnotation
+  id: ProductSearchResults_ObjectAnnotation
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\ProductSearchResults\ObjectAnnotation
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\TextAnnotation_DetectedBreak_BreakType
+  name: TextAnnotation_DetectedBreak_BreakType
+  id: TextAnnotation_DetectedBreak_BreakType
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\TextAnnotation\DetectedBreak\BreakType
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

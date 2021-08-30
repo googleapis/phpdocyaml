@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Connection\Rest
+  name: Rest
+  id: Rest
+  summary: |-
+    Implementation of the
+    [Google Cloud Vision JSON API](https://cloud.google.com/vision/reference/rest/).
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Connection\Rest::__construct()
+  - \Google\Cloud\Vision\Connection\Rest::annotate()
+  - \Google\Cloud\Vision\Connection\Rest::BASE_URI
+  status: deprecated
+  implements:
+  - \Google\Cloud\Vision\Connection\ConnectionInterface
+- uid: \Google\Cloud\Vision\Connection\Rest::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\Connection\Rest
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: config
+- uid: \Google\Cloud\Vision\Connection\Rest::annotate()
+  name: annotate
+  id: annotate
+  parent: \Google\Cloud\Vision\Connection\Rest
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: args
+- uid: \Google\Cloud\Vision\Connection\Rest::BASE_URI
+  name: BASE_URI
+  id: BASE_URI
+  parent: \Google\Cloud\Vision\Connection\Rest
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''https://vision.googleapis.com/'''

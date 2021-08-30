@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Twig\YamlExtension
+  name: YamlExtension
+  id: YamlExtension
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Twig\YamlExtension::getFilters()
+  - \Google\Cloud\Vision\Twig\YamlExtension::yaml()
+- uid: \Google\Cloud\Vision\Twig\YamlExtension::getFilters()
+  name: getFilters
+  id: getFilters
+  parent: \Google\Cloud\Vision\Twig\YamlExtension
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Twig\YamlExtension::yaml()
+  name: yaml
+  id: yaml
+  parent: \Google\Cloud\Vision\Twig\YamlExtension
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: mixed
+    name: val

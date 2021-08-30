@@ -1,0 +1,10 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\Product_KeyValue
+  name: Product_KeyValue
+  id: Product_KeyValue
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\Product\KeyValue instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

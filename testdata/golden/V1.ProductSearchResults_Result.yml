@@ -1,0 +1,11 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\V1\ProductSearchResults_Result
+  name: ProductSearchResults_Result
+  id: ProductSearchResults_Result
+  summary: This class is deprecated. Use Google\Cloud\Vision\V1\ProductSearchResults\Result
+    instead.
+  type: class
+  langs:
+  - php
+  status: deprecated

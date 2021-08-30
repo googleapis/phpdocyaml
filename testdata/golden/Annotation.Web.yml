@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Web
+  name: Web
+  id: Web
+  summary: |-
+    Represents a Web Detection result
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'WEB_DETECTION' ]);
+    $annotation = $vision->annotate($image);
+
+    $web = $annotation->web();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Web::__construct()
+  - \Google\Cloud\Vision\Annotation\Web::entities()
+  - \Google\Cloud\Vision\Annotation\Web::matchingImages()
+  - \Google\Cloud\Vision\Annotation\Web::partialMatchingImages()
+  - \Google\Cloud\Vision\Annotation\Web::pages()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+  properties:
+  - type: \Google\Cloud\Vision\Annotation\Web\WebEntity[]
+    name: entities
+  - type: \Google\Cloud\Vision\Annotation\Web\WebImage[]|null
+    name: matchingImages
+  - type: \Google\Cloud\Vision\Annotation\Web\WebImage[]|null
+    name: partialMatchingImages
+  - type: \Google\Cloud\Vision\Annotation\Web\WebPage[]|null
+    name: pages
+- uid: \Google\Cloud\Vision\Annotation\Web::__construct()
+  name: __construct
+  id: __construct
+  summary: Create a Web result.
+  parent: \Google\Cloud\Vision\Annotation\Web
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The annotation result
+- uid: \Google\Cloud\Vision\Annotation\Web::entities()
+  name: entities
+  id: entities
+  summary: |-
+    Entities deduced from similar images on the Internet.
+
+    Example:
+    ```
+    $entities = $web->entities();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Web
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Web::matchingImages()
+  name: matchingImages
+  id: matchingImages
+  summary: |-
+    Fully matching images from the internet.
+
+    Images are most likely near duplicates, and most often are a copy of the
+    given query image with a size change.
+
+    Example:
+    ```
+    $images = $web->matchingImages();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Web
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Web::partialMatchingImages()
+  name: partialMatchingImages
+  id: partialMatchingImages
+  summary: |-
+    Partial matching images from the Internet.
+
+    Those images are similar enough to share some key-point features. For
+    example an original image will likely have partial matching for its crops.
+
+    Example:
+    ```
+    $images = $web->partialMatchingImages();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Web
+  type: method
+  langs:
+  - php
+- uid: \Google\Cloud\Vision\Annotation\Web::pages()
+  name: pages
+  id: pages
+  summary: |-
+    Web pages containing the matching images from the Internet.
+
+    Example:
+    ```
+    $pages = $web->pages();
+    ```
+  parent: \Google\Cloud\Vision\Annotation\Web
+  type: method
+  langs:
+  - php

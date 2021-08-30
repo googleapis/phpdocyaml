@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\CropHint
+  name: CropHint
+  id: CropHint
+  summary: |-
+    Represents a recommended image crop.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'CROP_HINTS' ]);
+    $annotation = $vision->annotate($image);
+
+    $hints = $annotation->cropHints();
+    $hint = $hints[0];
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\CropHint::__construct()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\CropHint::__construct()
+  name: __construct
+  id: __construct
+  parent: \Google\Cloud\Vision\Annotation\CropHint
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: Crop Hint result

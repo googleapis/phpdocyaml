@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\Annotation\Entity
+  name: Entity
+  id: Entity
+  summary: |-
+    Represents an entity annotation. Entities are created by several
+    [Google Cloud Vision](https://cloud.google.com/vision/docs/) features, namely
+    `LANDMARK_DETECTION`, `LOGO_DETECTION`, `LABEL_DETECTION` and `TEXT_DETECTION`.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $image = $vision->image($imageResource, [ 'text' ]);
+    $annotation = $vision->annotate($image);
+
+    $text = $annotation->text()[0];
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\Annotation\Entity::__construct()
+  status: deprecated
+  inheritedMembers:
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::$info
+  - \Google\Cloud\Vision\Annotation\AbstractFeature::info()
+- uid: \Google\Cloud\Vision\Annotation\Entity::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create an entity annotation result.
+
+    This class is created internally by {@see} and is used to represent various
+    annotation feature results.
+
+    This class should not be instantiated externally.
+
+    Entities are returned by {@see},
+    {@see},
+    {@see} and
+    {@see}.
+  parent: \Google\Cloud\Vision\Annotation\Entity
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: info
+    description: The entity annotation result

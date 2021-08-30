@@ -1,0 +1,259 @@
+### YamlMime:UniversalReference
+items:
+- uid: \Google\Cloud\Vision\VisionClient
+  name: VisionClient
+  id: VisionClient
+  summary: |-
+    Google Cloud Vision allows you to understand the content of an image,
+    classify images into categories, detect text, objects, faces and more. Find
+    more information at the
+    [Google Cloud Vision docs](https://cloud.google.com/vision/docs/).
+
+    Please note this client will be deprecated in our next release. In order
+    to receive the latest features and updates, please take
+    the time to familiarize yourself with {@see}.
+
+    Example:
+    ```
+    use Google\Cloud\Vision\VisionClient;
+
+    $vision = new VisionClient();
+    ```
+  type: class
+  langs:
+  - php
+  children:
+  - \Google\Cloud\Vision\VisionClient::__construct()
+  - \Google\Cloud\Vision\VisionClient::image()
+  - \Google\Cloud\Vision\VisionClient::images()
+  - \Google\Cloud\Vision\VisionClient::annotate()
+  - \Google\Cloud\Vision\VisionClient::annotateBatch()
+  - \Google\Cloud\Vision\VisionClient::VERSION
+  - \Google\Cloud\Vision\VisionClient::FULL_CONTROL_SCOPE
+  status: deprecated
+  properties:
+  - type: \Google\Cloud\Vision\Connection\ConnectionInterface
+    name: connection
+- uid: \Google\Cloud\Vision\VisionClient::__construct()
+  name: __construct
+  id: __construct
+  summary: |-
+    Create a Vision client.
+
+    Note that when creating a VisionClient instance, setting
+    `$config.projectId` is not supported. To switch between projects, you
+    must provide credentials with access to the project.
+  parent: \Google\Cloud\Vision\VisionClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: array
+    name: config
+    description: '[optional] {     Configuration Options.      @type string $apiEndpoint
+      A hostname with optional port to use in           place of the service''s default
+      endpoint.     @type CacheItemPoolInterface $authCache A cache for storing access           tokens.
+      **Defaults to** a simple in memory implementation.     @type array $authCacheOptions
+      Cache configuration options.     @type callable $authHttpHandler A handler used
+      to deliver Psr7           requests specifically for authentication.     @type
+      FetchAuthTokenInterface $credentialsFetcher A credentials           fetcher
+      instance.     @type callable $httpHandler A handler used to deliver Psr7 requests.           Only
+      valid for requests sent over REST.     @type array $keyFile The contents of
+      the service account credentials           .json file retrieved from the Google
+      Developer''s Console.           Ex: `json_decode(file_get_contents($path), true)`.     @type
+      string $keyFilePath The full path to your service account           credentials
+      .json file retrieved from the Google Developers           Console.     @type
+      float $requestTimeout Seconds to wait before timing out the           request.
+      **Defaults to** `0` with REST and `60` with gRPC.     @type int $retries Number
+      of retries for a failed request.           **Defaults to** `3`.     @type array
+      $scopes Scopes to be used for the request.     @type string $quotaProject Specifies
+      a user project to bill for           access charges associated with the request.
+      }'
+- uid: \Google\Cloud\Vision\VisionClient::image()
+  name: image
+  id: image
+  summary: |-
+    Create an instance of {@see Google\Cloud\Vision\Image} with required features and options.
+
+    This method should be used to configure a single image, or when a set of
+    images requires different settings for each member of the set. If you
+    have a set of images which all will use the same settings,
+    {@see} may be quicker and
+    simpler to use.
+
+    This method will not perform any service requests, and is meant to be
+    used to configure a request prior to calling
+    {@see}.
+
+    For more information, including best practices and examples detailing
+    other usage such as `$imageContext`, see {@see}.
+
+    Example:
+    ```
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+
+    $image = $vision->image($imageResource, [
+        'FACE_DETECTION'
+    ]);
+    ```
+
+    ```
+    // Setting maxResults for a feature
+
+    $imageResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+
+    $image = $vision->image($imageResource, [
+        'FACE_DETECTION'
+    ], [
+        'maxResults' => [
+            'FACE_DETECTION' => 1
+        ]
+    ]);
+    ```
+  parent: \Google\Cloud\Vision\VisionClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource|string|\Google\Cloud\Storage\StorageObject
+    name: image
+    description: An image to configure with the given settings. This parameter will
+      accept a resource, a string of bytes, the URI of an image in a publicly-accessible
+      web location, or an instance of {@see}.
+  - type: array
+    name: features
+    description: A list of cloud vision [features](https://cloud.google.com/vision/reference/rest/v1/images/annotate#type)
+      to apply to the image.
+  - type: array
+    name: options
+    description: See {@see} for configuration details.
+- uid: \Google\Cloud\Vision\VisionClient::images()
+  name: images
+  id: images
+  summary: |-
+    Create an array of type {@see Google\Cloud\Vision\Image} with required features and options set for
+    each member of the set.
+
+    This method is useful for quickly configuring every member of a set of
+    images with the same features and options. Should you need to provide
+    different features or options for one or more members of the set,
+    {@see} is a better choice.
+
+    This method will not perform any service requests, and is meant to be
+    used to configure a request prior to calling
+    {@see}.
+
+    For more information, including best practices and examples detailing
+    other usage such as `$imageContext`, see {@see}.
+
+    Example:
+    ```
+    // In the example below, both images will have the same settings applied.
+    // They will both run face detection and return up to 10 results.
+
+    $familyPhotoResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $weddingPhotoResource = fopen(__DIR__ . '/assets/wedding-photo.jpg', 'r');
+
+    $images = $vision->images([$familyPhotoResource, $weddingPhotoResource], [
+        'FACE_DETECTION'
+    ], [
+        'maxResults' => [
+            'FACE_DETECTION' => 10
+        ]
+    ]);
+    ```
+  parent: \Google\Cloud\Vision\VisionClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: resource[]|string[]|\Google\Cloud\Storage\StorageObject[]
+    name: images
+    description: An array of images to configure with the given settings. Each member
+      of the set can be a resource, a string of bytes, the URI of an image in a publicly-accessible
+      web location, or an instance of {@see}.
+  - type: array
+    name: features
+    description: A list of cloud vision features to apply to each image.
+  - type: array
+    name: options
+    description: See {@see} for configuration details.
+- uid: \Google\Cloud\Vision\VisionClient::annotate()
+  name: annotate
+  id: annotate
+  summary: |-
+    Annotate a single image.
+
+    Example:
+    ```
+    $familyPhotoResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+
+    $image = $vision->image($familyPhotoResource, [
+        'FACE_DETECTION'
+    ]);
+
+    $result = $vision->annotate($image);
+    ```
+  parent: \Google\Cloud\Vision\VisionClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\Image
+    name: image
+    description: The image to annotate
+  - type: array
+    name: options
+    description: Configuration options
+- uid: \Google\Cloud\Vision\VisionClient::annotateBatch()
+  name: annotateBatch
+  id: annotateBatch
+  summary: |-
+    Annotate a set of images.
+
+    Example:
+    ```
+    $images = [];
+
+    $familyPhotoResource = fopen(__DIR__ . '/assets/family-photo.jpg', 'r');
+    $eiffelTowerResource = fopen(__DIR__ . '/assets/eiffel-tower.jpg', 'r');
+
+    $images[] = $vision->image($familyPhotoResource, [
+        'FACE_DETECTION'
+    ]);
+
+    $images[] = $vision->image($eiffelTowerResource, [
+        'LANDMARK_DETECTION'
+    ]);
+
+    $result = $vision->annotateBatch($images);
+    ```
+  parent: \Google\Cloud\Vision\VisionClient
+  type: method
+  langs:
+  - php
+  parameters:
+  - type: \Google\Cloud\Vision\Image[]
+    name: images
+    description: An array consisting of instances of {@see}.
+  - type: array
+    name: options
+    description: Configuration Options
+- uid: \Google\Cloud\Vision\VisionClient::VERSION
+  name: VERSION
+  id: VERSION
+  parent: \Google\Cloud\Vision\VisionClient
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''1.3.3'''
+- uid: \Google\Cloud\Vision\VisionClient::FULL_CONTROL_SCOPE
+  name: FULL_CONTROL_SCOPE
+  id: FULL_CONTROL_SCOPE
+  parent: \Google\Cloud\Vision\VisionClient
+  type: constant
+  langs:
+  - php
+  syntax:
+    content: '''https://www.googleapis.com/auth/cloud-platform'''
